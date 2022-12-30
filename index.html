@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h2 class="text-center">Javascript Calculator by Md Shijan ALi</h2>
+
+    <div class="calculatorBody">
+        <table>
+            <tr>
+                <td colspan="4"><input type="text" name="" id="MyResult"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="C" onclick="DeleteMe()"></td>
+                <td><input type="button" name="" id="" value="(" onclick="calculetor('(')"></td>
+                <td><input type="button" name="" id="" value=")" onclick="calculetor(')')"></td>
+                <td style="background-color:black"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" name="" id="" value="7" onclick="calculetor('7')"></td>
+                <td><input type="button" name="" id="" value="8" onclick="calculetor('8')"></td>
+                <td><input type="button" name="" id="" value="9" onclick="calculetor('9')"></td>
+                <td><input type="button" name="" id="" value="+" onclick="calculetor('+')"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" name="" id="" value="4" onclick="calculetor('4')"></td>
+                <td><input type="button" name="" id="" value="5" onclick="calculetor('5')"></td>
+                <td><input type="button" name="" id="" value="6" onclick="calculetor('6')"></td>
+                <td><input type="button" name="" id="" value="-" onclick="calculetor('-')"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" name="" id="" value="1" onclick="calculetor('1')"></td>
+                <td><input type="button" name="" id="" value="2" onclick="calculetor('2')"></td>
+                <td><input type="button" name="" id="" value="3" onclick="calculetor('3')"></td>
+                <td><input type="button" name="" id="" value="*" onclick="calculetor('*')"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" name="" id="" value="0" onclick="calculetor('0')"></td>
+                <td><input type="button" name="" id="" value="." onclick="calculetor('.')"></td>
+                <td><input type="button" name="" id="" value="/" onclick="calculetor('/')"></td>
+                <td><input type="button" name="" id="" value="=" onclick="Answer()"></td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+
+    <script>
+        function DeleteMe() {
+            document.getElementById('MyResult').value = ''
+        }
+
+        function calculetor(NewValue) {
+            document.getElementById('MyResult').value += NewValue;
+        }
+
+        function Answer() {
+            var a = document.getElementById('MyResult').value;
+            var b = eval(a);
+            document.getElementById('MyResult').value = b;
+        }
+    </script>
+
+</body>
+
+</html>
